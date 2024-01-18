@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.glassEffect {
+    background: linear-gradient(
+    90deg,
+    rgba(251, 131, 131, 0.1) 0%,
+    rgba(254, 81, 150, 0.1) 100%
+  );
+  background-blend-mode: ;
+  box-shadow:
+    inset 0px 5px 5px 0px rgba(255, 255, 255, 0.1),
+    inset 0px -5px 5px 0px rgba(254, 81, 150, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+
+
+.circle1 {
+  background: linear-gradient(-25deg, #d84869, #f46641);
+  box-shadow: 0 0 50px #d84869;
+  animation-name: circleAni;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes circleAni {
+  50% {
+    transform: translate(20px);
+  }
+}
+
+.circle2 {
+  background: linear-gradient(-25deg, #5648d8, #8641f4);
+  box-shadow: 0 0 50px #5648d8;
+  animation-name: circleAni;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+.overlay {
+  position: absolute; /* Sit on top of the page content */
+  display: none; /*Hidden by default*/
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(5px);
+  background-color: rgba(37, 37, 37, 0.5); /* Black background with opacity */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.active {
+  display: block;
+}
+
+.shareProfile {
+  transform: scale(0);
+}
+
+.modalActive {
+  display: block;
+  transform: scale(1);
+}
