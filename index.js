@@ -6,7 +6,11 @@ function openModal() {
     shareProfileElement.classList.add('modalActive');
 }
 
+window.openModal = openModal;
+
 function closeModal() {
     overlay.classList.remove('active');
     shareProfileElement.classList.remove('modalActive');
 }
+
+window.closeModal = closeModal;
